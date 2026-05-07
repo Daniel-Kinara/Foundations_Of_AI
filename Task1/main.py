@@ -56,3 +56,21 @@ for epoch in range(epochs):
     print(f"Epoch {epoch +1}, Loss: {running_loss:.4f}")
 
 print("Training completed!")
+correct = 0
+total = 0
+
+with torch.no_grad():
+
+    for images, labels in test_loader:
+
+        outputs = model(images)
+
+        _, predicted = torch.max(outputs.data, 1)
+
+        total += labels.size(0)
+
+        correct += (predicted == labels).sum().item()
+
+accuracy = 100 * correct / total
+
+print(f"Accuracy: {accuracy}%")
