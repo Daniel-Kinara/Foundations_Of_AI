@@ -1,23 +1,58 @@
+import torch
 import torchvision
 import torchvision.transforms as transforms
-import matplotlib.pyplot as plt
+import torch.nn as nn
+import torch.optim as optim
 
 # Convert images to tensors
 transform = transforms.ToTensor()
 
-# Download dataset
+# Load datasets
 train_dataset = torchvision.datasets.MNIST(
     root="./data", train=True, download=True, transform=transform
 )
 
-# Get one image
-image, label = train_dataset[0]
+test_dataset = torchvision.datasets.MNIST(
+    root="./data", train=False, download=True, transform=transform
+)
 
-# Show image
-plt.imshow(image.squeeze(), cmap="gray")
+# Load data in batches
+train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle=True)
 
-# Title
-plt.title(f"Label: {label}")
+test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=64, shuffle=False)
 
-# Display
-plt.show()
+# Build Neural Network
+model = nn.Sequential(
+    nn.Flatten(), nn.Linear(28 * 28, 128), nn.ReLU(), nn.Linear(128, 10)
+)
+
+# Loss function
+loss_function = nn.CrossEntropyLoss()
+
+# Optimizer
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+# Training
+epochs = 5
+
+for epoch in range(epochs):
+
+    running_loss = 0
+
+    for images, labels in train_loader:
+
+        optimizer.zero_grad()
+
+        outputs = model(images)
+
+        loss = loss_function(outputs, labels)
+
+        loss.backward()
+
+        optimizer.step()
+
+        running_loss += loss.item()
+
+    print(f"Epoch {epoch +1}, Loss: {running_loss:.4f}")
+
+print("Training completed!")
