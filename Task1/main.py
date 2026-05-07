@@ -56,6 +56,8 @@ for epoch in range(epochs):
     print(f"Epoch {epoch +1}, Loss: {running_loss:.4f}")
 
 print("Training completed!")
+
+# accuracy testing
 correct = 0
 total = 0
 
