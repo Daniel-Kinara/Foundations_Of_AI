@@ -1,5 +1,9 @@
 import torch
+
+# pyrefly: ignore [missing-import]
 import torchvision
+
+# pyrefly: ignore [missing-import]
 import torchvision.transforms as transforms
 import torch.nn as nn
 import torch.optim as optim
