@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 from constraint import Problem
 
 # Create CSP problem
