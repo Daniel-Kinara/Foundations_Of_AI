@@ -7,8 +7,6 @@
 **Reg No:** CIT-227-080/2024
 **Course:** BSc Software Engineering  
 **Unit:** CCS 2226 Foundations of Artificial Intelligence  
-**Institution:** MMU
-**Year:** 2026
 
 # Project Overview
 
