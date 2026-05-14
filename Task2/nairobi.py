@@ -77,6 +77,6 @@ solution = problem.getSolution()
 
 # Display results
 print("Nairobi Sub-Counties Colouring Solution:\n")
-
+# Print sub-county and colour
 for subcounty, colour in solution.items():
     print(f"{subcounty}: {colour}")
