@@ -1,4 +1,6 @@
-````markdown
+
+```markdown
+
 # CCS 2226 Foundations of Artificial Intelligence — Practical Tasks & CAT
 
 ## Student Information
@@ -8,7 +10,7 @@
 **Course:** BSc Software Engineering  
 **Unit:** CCS 2226 Foundations of Artificial Intelligence  
 
-# Project Overview
+## Project Overview
 
 This repository contains solutions for:
 
@@ -23,7 +25,7 @@ The project demonstrates fundamental Artificial Intelligence concepts including:
 - Search Algorithms
 - Intelligent Agents
 
-# Technologies Used
+## Technologies Used
 
 - Python 3.14.3
 - pip 3.14
@@ -31,32 +33,35 @@ The project demonstrates fundamental Artificial Intelligence concepts including:
 - PyTorch
 - python-constraint library
 
-# Project Structure
+## Project Structure
 
 ```text
 Foundations_Of_AI
 │
 ├── Task1
-│   └── main.py
+│   ├── main.py
+│   └── README.md
 │
 ├── Task2
 │   ├── australia.py
-│   └── nairobi.py
+│   ├── nairobi.py
+│   └── README.md
 │
-├── Task3
-│   └──
+├── Task3-Prolog-work
+│   ├── family.pl
+│   └── README.md
 │
-├── Task4
-│   ├──
-│   └──
+├── Task4-Search-work
+│   ├── bfs.py
+│   ├── dfs.py
+│   └── README.md
 │
 ├── CAT1
 │   ├── question1-b.py
 │   └── vacuum_agent.py
 │
-└── README.md
-```
-````
+  └── README.md
+  ```
 
 # PRACTICAL TASKS
 
@@ -134,20 +139,47 @@ python australia.py
 python nairobi.py
 ```
 
-# AI Concepts Demonstrated
+# AI Concepts Demonstrated'
 
 - Constraint Satisfaction Problems
 - Graph Colouring
 - Search Algorithms
 - Problem Solving
 
-# TASK 3 AND TASK 4 COMING SOON!
+# TASK 3
+
+## Objective'
+
+To implement a Prolog program that represents a family tree.
+
+## Running the Program'
+
+```bash
+swipl
+['family.pl'].
+?- grandparent(john, sarah).
+```
+
+# TASK 4
+
+## Task4_Search-work
+
+## Objectives'
+
+To implement Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms.
+
+## Running the Programs'
+
+```bash
+python bfs.py
+python dfs.py
+```
 
 # CAT TASK
 
 # QUESTION 1 — A\* Search Algorithm
 
-## Objective
+## Objective '
 
 Implement the A\* Search Strategy to optimize path resources.
 
@@ -161,13 +193,13 @@ Where:
 - h(n) = heuristic estimate
 - f(n) = total estimated cost
 
-## Running the Program
+## Running the Program '
 
 ```bash
 python question1-b.py
 ```
 
-# AI Concepts Demonstrated
+# AI Concepts Demonstrated '
 
 - Heuristic Search
 - Optimal Pathfinding
@@ -175,23 +207,23 @@ python question1-b.py
 
 # QUESTION 2 — Vacuum Cleaner Agent
 
-## Objective
+## Objectives
 
 Design a simple intelligent vacuum cleaner agent.
 
-## Features
+## Features '
 
 - Detects dirty rooms
 - Cleans automatically
 - Changes room states
 
-## Running the Program
+## Running the Programs
 
 ```bash
 python vacuum_agent.py
 ```
 
-# AI Concepts Demonstrated
+## AI Concepts Demonstrate '
 
 - Intelligent Agents
 - Environment Interaction
